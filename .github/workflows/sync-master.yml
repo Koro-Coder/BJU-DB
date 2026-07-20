@@ -13,13 +13,13 @@ jobs:
       - name: Checkout master repository
         uses: actions/checkout@v4
         with:
-          repository: Koro-Coder/MasterRepo
+          repository: Koro-Coder/master
           token: ${{ secrets.MASTER_TOKEN }}
           fetch-depth: 0
 
       - name: Switch to selected branch
         run: |
-          git checkout main
+          git checkout Tracker
 
       - name: Configure Git
         run: |
@@ -49,4 +49,4 @@ jobs:
 
       - name: Push changes
         run: |
-          git push origin main
+          git push origin Tracker
